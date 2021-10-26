@@ -17,4 +17,3 @@ const options = { weekday: "long", month: "long", day: "numeric" };
 const today = new Date();
 
 dateElement.innerHTML = today.toLocaleDateString("pt-BR", options);
-console.log(dateElement);
