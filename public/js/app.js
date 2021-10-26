@@ -17,3 +17,13 @@ const options = { weekday: "long", month: "long", day: "numeric" };
 const today = new Date();
 
 dateElement.innerHTML = today.toLocaleDateString("pt-BR", options);
+
+// add function to do
+
+function addToDo(toDo) {
+
+    const item = `
+                
+                `;
+
+}
