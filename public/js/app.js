@@ -13,7 +13,7 @@ const UNCHECK = "fa-circle-thin";
 const LINE_THROUGH = "lineThrough";
 
 // Show today dates
-const options = { weekday: "long", month: "long", day: "numeric" };
+const options = { weekday: "long", month: "long", day: "numeric", year: "numeric" };
 const today = new Date();
 
 dateElement.innerHTML = today.toLocaleDateString("pt-BR", options);
