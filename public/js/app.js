@@ -86,3 +86,16 @@ function removeToDo(element) {
 
     LIST[element.id].trash = true;
 }
+
+// target the items created dynamically
+
+list.addEventListener("click", function (event) {
+    const element = event.target;   // return element
+    const elementJob = element.attributes.job.value;
+
+    if (elementJob == "complete") {
+        completeToDo(element);
+    } else if (elementJob == "delete") {
+        removeToDo(element);
+    }
+});
