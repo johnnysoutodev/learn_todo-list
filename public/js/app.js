@@ -5,7 +5,7 @@
 const clear = document.querySelector(".clear");
 const dateElement = document.getElementById("date");
 const list = document.getElementById("list");
-const input = document.getElementById("input");
+const input = document.getElementById("item");
 
 // Classes names
 const CHECK = "fa-check-circle";
@@ -36,4 +36,18 @@ function addToDo(toDo) {
 
 }
 
-addToDo("Drink Coffee");
+// Add an item to the list user the enter key
+
+document.addEventListener('keyup', function (event) {
+
+    if (event.keyCode === 13) {
+        const toDo = input.value;
+
+        // if the input isn't empty
+        if (toDo) {
+            addToDo(toDo);
+        }
+        input.value = "";
+    }
+
+});
